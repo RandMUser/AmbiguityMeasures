@@ -1,0 +1,9 @@
+pip install -U pip setuptools wheel
+pip install -U 'spacy[cuda12x]'
+python -m spacy download en_core_web_md
+
+
+https://docs.nvidia.com/cuda/cuda-installation-guide-linux/
+python3 -m pip install --upgrade setuptools pip wheel
+python3 -m pip install nvidia-pyindex
+python3 -m pip install nvidia-cuda-runtime-cu12

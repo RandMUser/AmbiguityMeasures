@@ -1,0 +1,11 @@
+pandas
+pip
+setuptools
+wheel
+spacy
+scikit-learn
+matplotlib
+seaborn
+chromadb
+sentence-transformers
+ipykernel
