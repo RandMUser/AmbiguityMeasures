@@ -1,0 +1,8 @@
+Set the .venv folder as the default for the vscode environemnt project, or 'opened folder'.
+-- Popup will prompt when running setup_project.sh
+
+Open the cloned / checked out folder AmbiguityMeasures as a filder in VS Code...
+
+File system size? ~30 GB minimum for the msmarco data... Probably need atleast 100 GB to run a small experiment with 2 text embeding models operating as dense retrievers in the search system architecture being evaulated in the experiment.
+
+

@@ -6,15 +6,22 @@ CORPUS_DIR="$DATA_DIR/corpus"
 mkdir -p "$DATA_DIR"
 mkdir -p "$CORPUS_DIR"
 
-# Function to download a file if it does not exist
+# Function to download a file if it does not exist or resume if interrupted
 download_if_not_exists() {
   local url=$1
   local output_path=$2
   if [ -f "$output_path" ]; then
-    echo "File $output_path already exists. Skipping download."
+    # Check if the file is incomplete by attempting to resume the download
+    echo "File $output_path already exists. Checking if download is complete..."
+    if ! curl -L -C - -o "$output_path" "$url"; then
+      echo "Error: Failed to resume download for $url"
+      exit 1
+    else
+      echo "File $output_path download resumed and completed successfully."
+    fi
   else
     echo "Downloading $output_path..."
-    if ! curl -o "$output_path" "$url"; then
+    if ! curl -L -C - -o "$output_path" "$url"; then
       echo "Error: Failed to download $url"
       exit 1
     fi

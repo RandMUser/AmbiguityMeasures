@@ -1,0 +1,100 @@
+\documentclass{article}
+\usepackage{geometry}
+\geometry{a4paper, margin=1in}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage{hyperref}
+
+\title{Investigation Framework for Evaluating Embedding Models in Dense Retriever Search Systems}
+\author{Research Team}
+\date{\today}
+
+\begin{document}
+
+\maketitle
+
+\section{Introduction}
+The objective of this investigation is to \textbf{evaluate the quality and consistency of text embedding models for dense retriever search systems} 
+through the development and comparison of novel evaluation metrics, such as the A-QSR-RDMD. 
+The investigation focuses on understanding \textbf{how embedding models behave under meaning-preserving input variations} 
+and aims to assess their suitability for search tasks by comparing them across multiple evaluation measures.
+
+\subsection{Goals and Motivation}
+\begin{itemize}
+    \item \textbf{Research Problem:} How well do embedding models maintain consistency and accurately represent semantic relationships in the context of search tasks?
+    \item \textbf{Objective:} Develop and evaluate new measures (e.g., A-QSR-RDMD) to capture latent properties of embedding models such as \textbf{semantic consistency} and \textbf{variance in response to ambiguous inputs}.
+    \item \textbf{Impact:} Inform the development of \textbf{better evaluation methodologies} for dense retrieval systems and assess \textbf{consistency} as a desirable property in NLP models.
+\end{itemize}
+
+\section{Experimental Setup}
+\subsection{Embedding Models}
+\begin{itemize}
+    \item \textbf{Word2Vec} (via spaCy pipeline)
+    \item \textbf{RoBERTa-based} model (via \texttt{sentence-transformers})
+    \item Modular framework to incorporate additional models as needed (e.g., BERT, DPR).
+    \item \textbf{CUDA acceleration} enabled where available.
+\end{itemize}
+
+\subsection{Search Dataset}
+\begin{itemize}
+    \item \textbf{MS MARCO V2}: A subset containing queries, qrels (relevance judgments), and corpus data.
+    \item Dataset files:
+    \begin{itemize}
+        \item \textbf{Queries:} (qid, query)
+        \item \textbf{Qrels:} (qid, docid, relevance)
+        \item \textbf{Corpus:} (document text)
+    \end{itemize}
+\end{itemize}
+
+\section{Evaluation Metrics}
+\subsection{Core Metrics}
+\begin{itemize}
+    \item \textbf{NDCG} (Normalized Discounted Cumulative Gain)
+    \item \textbf{Recall@k}
+    \item \textbf{MRR} (Mean Reciprocal Rank)
+\end{itemize}
+
+\subsection{Proposed New Measures}
+\begin{itemize}
+    \item \textbf{A-QSR-RDMD}: Ambiguity by Query Semantic Region - Relevant Document Mean Deviation
+    \begin{itemize}
+        \item Captures the \textbf{invariance and semantic consistency} of embeddings for similar queries.
+        \item Investigates the variance in \textbf{distance from centroids} for grouped queries and documents, revealing the degree of ambiguity in query embeddings.
+    \end{itemize}
+\end{itemize}
+
+\section{Methodology}
+\begin{enumerate}
+    \item \textbf{Data Preparation}: 
+    Load and preprocess the MS MARCO queries, qrels, and corpus. 
+    Generate embeddings for queries and documents using selected models.
+    \item \textbf{Experimental Execution}:
+    \begin{itemize}
+        \item Retrieve Documents: Perform search with query embeddings to identify top-k results.
+        \item Compute Metrics: Calculate NDCG, Recall@k, and MRR for each model.
+        \item Apply New Measures: Compute A-QSR-RDMD for each query and document region.
+    \end{itemize}
+    \item \textbf{Analysis}:
+    \begin{itemize}
+        \item Compare Models: Use both traditional and new metrics to assess each model’s performance.
+        \item Consistency Evaluation: Analyze how the models behave under meaning-preserving input changes (e.g., small query variations).
+        \item Visualization: Use plots and tables to present the distribution of metric values across models and datasets.
+    \end{itemize}
+\end{enumerate}
+
+\section{Expected Outcomes}
+\begin{itemize}
+    \item \textbf{Validation of New Measures}: Demonstrate that metrics like A-QSR-RDMD capture unique properties of embedding models, such as \textbf{semantic consistency} and \textbf{ambiguity handling}.
+    \item \textbf{Model Selection Insights}: Identify which embedding models exhibit desirable properties (e.g., consistency, stable centroid distances) for dense retrieval tasks.
+    \item \textbf{Methodological Contributions}: Propose a modular, reproducible framework for evaluating embedding models using both traditional and new metrics.
+\end{itemize}
+
+\section{Next Steps}
+\begin{enumerate}
+    \item Finalize the code for A-QSR-RDMD and integrate other metrics into the experimental framework.
+    \item Execute experiments with multiple models and datasets.
+    \item Compare performance across models using traditional and novel metrics.
+    \item Prepare a detailed report summarizing the results and insights from the investigation.
+\end{enumerate}
+
+\end{document}

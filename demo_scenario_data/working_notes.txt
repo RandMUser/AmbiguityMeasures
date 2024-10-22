@@ -1,0 +1,20 @@
+Previous work with Chat GPT on other measures 'ordered consistency' from the idea extending from the self similarity paper.
+-- Good notation but probably need to table for now...
+    https://chatgpt.com/c/6705b2a9-9358-8005-af2d-5df732fc9d8b
+
+
+Previous work with Chat GPT On  A-QSR-RDMD metric code and notation...
+-- Closer to what I have in the POC code (Spiral 1 code complete.)
+    https://chatgpt.com/c/6706d189-62ec-8005-89dc-7b01db712aac
+
+---- Maybe feed Chat GPT the latest code and ask for a precise but concise overview with notation?
+-- Could get bloated if I give the code up front...
+
+---- Maybe ask Chat GPT to describe the general framework for the investigation with the A-QSR-RDMD metric as one example to try within the investigation...
+-- Trying in this chat...
+Try to describe the general framework for the investigation where the A-QSR-RDMD metric is one example of a new measure to try within the investigation. Please ask if you need any additional information about the investigation to proceed with the task of precicesly but concisely describing the general framework of the investigation where the A-QSR-RDMD metric is just one example of a feature to implement in the experiment.
+-- This worked out well and resulted in investigation_overview.tex
+---- Maybe commit this initial version and then give Chat GPT the code to make it better aligned to the general intent and PoC implementation.
+
+
+

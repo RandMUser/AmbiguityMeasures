@@ -1,12 +1,15 @@
 #!/bin/bash
+# an update to setup_project.sh that incorporates trec_eval check and install as a separate setup script versus apt-get target.
+# TODO: needs to be tested and moved into the root dir to replace setup_project.sh
 
 # Define the virtual environment directory
 VENV_DIR=".venv"
 
-# Dictionary of installation commands (command -> package name)
+# Dictionary of installation commands (command -> package name or install script)
 declare -A INSTALL_COMMANDS=(
     ["python3"]="python3"
     ["curl"]="curl"
+    ["trec_eval"]="./scripts/install_trec_eval.sh"
 )
 
 # Run apt-get update once
@@ -24,7 +27,13 @@ check_command() {
 # Function to install prerequisite commands
 install_command() {
     if [[ -n "${INSTALL_COMMANDS[$1]}" ]]; then
-        sudo apt-get install -y "${INSTALL_COMMANDS[$1]}"
+        if [[ "${INSTALL_COMMANDS[$1]}" == *".sh" ]]; then
+            # If the value is a script, run the script to install the command
+            bash "${INSTALL_COMMANDS[$1]}"
+        else
+            # Otherwise, use apt-get to install the package
+            sudo apt-get install -y "${INSTALL_COMMANDS[$1]}"
+        fi
     else
         echo "No installation command defined for $1. Please install it manually."
         exit 1
@@ -32,7 +41,7 @@ install_command() {
 }
 
 # List of prerequisite commands
-PREREQUISITES=("python3" "curl")
+PREREQUISITES=("python3" "curl" "trec_eval")
 
 # Check for all prerequisites
 for cmd in "${PREREQUISITES[@]}"; do
