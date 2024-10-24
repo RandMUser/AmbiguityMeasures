@@ -6,3 +6,4 @@ code/__pycache__/
 code/trec_eval_results.txt
 code/results.trec
 persisted_vector_store/
+demo_scenario_data/qerl_visualize.pdf
