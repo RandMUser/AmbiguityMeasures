@@ -1,0 +1,147 @@
+
+Scenario ID: 1
+Title: Ambiguity in Identical Queries with Different Topics
+Intuition: Identical queries (q1, q2) are expected to result in identical embeddings. If the relevant passages paired with these queries (p1, p2) address distinct topics, the ambiguity is inferred due to multiple possible meanings represented by the identical embeddings.
+
+Queries:
+  Query ID: S1_q1
+  Query: falcon wingspan
+  Lexical Topic: falcon
+  Semantic Topic: aircraft
+
+  Query ID: S1_q2
+  Query: falcon wingspan
+  Lexical Topic: falcon
+  Semantic Topic: bird
+
+  Query ID: S1_q3
+  Query: falcon maximum airspeed
+  Lexical Topic: falcon
+  Semantic Topic: bird
+
+  Query ID: S1_q4
+  Query: falcon species description
+  Lexical Topic: falcon
+  Semantic Topic: bird
+
+  Query ID: S1_q5
+  Query: falcon hunting speed
+  Lexical Topic: falcon
+  Semantic Topic: bird
+
+Passages:
+  Passage ID: S1_p1
+  Text: The General Dynamics F-16 Fighting Falcon is an American single-engine supersonic multirole fighter aircraft originally developed by General Dynamics for the United States Air Force (USAF). The F-16 is a single-engine fighter aircraft that is used by the U.S. Air Force, the Israeli Air Force, and many other nations. It is powered by a Pratt & Whitney or General Electric turbofan engine. The F-16 is armed with a 20-mm rotary cannon and can carry a variety of bombs and missiles. The wingspan of the F-16 Fighting Falcon is 32 feet, 8 inches (9.8 meters).
+  Lexical Topic: falcon
+  Semantic Topic: aircraft
+
+  Passage ID: S1_p2
+  Text: Biology. Peregrine falcons weigh 530-1600 grams with a wingspan of 39.4-43.3 inches (100-110 cm). The females are larger than the males but both sexes have similar plumage with long pointed wings and a long tail. The peregrine falcon is known for high-speed flight reaching up to 240 mph.
+  Lexical Topic: falcon
+  Semantic Topic: bird
+
+  Passage ID: S1_p3
+  Text: Falcons are birds of prey in the genus Falco, which includes about 40 species. Some small species of falcons with long, narrow wings are called hobbies, and some that hover while hunting are called kestrels. Speed: Peregrine falcon: 240 mph. Wingspan: Peregrine falcon: 2.4 – 3.9 ft. Scientific name: Falco. Bird in English: falcon. Class: Aves. Domain: Eukaryota.
+  Lexical Topic: falcon
+  Semantic Topic: bird
+
+  Passage ID: S1_p4
+  Text: The falcon's hunting behavior includes a high-speed dive called a stoop. Falcons are known to achieve remarkable speeds during stoops, often exceeding 200 mph, making them one of the fastest animals in the animal kingdom.
+  Lexical Topic: falcon
+  Semantic Topic: bird
+
+  Passage ID: S1_p5
+  Text: The F-16 Falcon is often used in military operations involving rapid aerial maneuvers and air-to-air combat. It is renowned for its agility and versatile weapons system.
+  Lexical Topic: falcon
+  Semantic Topic: aircraft
+
+QRELs:
+  Query ID: S1_q1, Passage ID: S1_p1, Relevance: relevant
+  Query ID: S1_q2, Passage ID: S1_p2, Relevance: relevant
+  Query ID: S1_q3, Passage ID: S1_p3, Relevance: relevant
+  Query ID: S1_q4, Passage ID: S1_p3, Relevance: relevant
+  Query ID: S1_q5, Passage ID: S1_p4, Relevance: relevant
+  Query ID: S1_q1, Passage ID: S1_p2, Relevance: not-relevant
+  Query ID: S1_q1, Passage ID: S1_p3, Relevance: not-relevant
+  Query ID: S1_q2, Passage ID: S1_p1, Relevance: not-relevant
+  Query ID: S1_q3, Passage ID: S1_p1, Relevance: not-relevant
+  Query ID: S1_q3, Passage ID: S1_p2, Relevance: relevant
+
+Lexical Semantic Dictionary:
+
+Term: falcon
+  Definition: diurnal birds of prey having long pointed powerful wings adapted for swift flight
+  Examples: None
+  Lemmas: falcon
+  Hypernyms: hawk.n.01
+  Hyponyms: kestrel.n.02, hobby.n.03, sparrow_hawk.n.01, peregrine.n.01, gyrfalcon.n.01, pigeon_hawk.n.01, caracara.n.01
+  Semantic Topics: bird
+
+  Definition: hunt with falcons
+  Examples: The tribes like to falcon in the desert
+  Lemmas: falcon
+  Hypernyms: hunt.v.01
+  Hyponyms: None
+  Semantic Topics: bird
+
+  Definition: F-16 Fighting Falcon is an American single-engine supersonic multirole fighter aircraft
+  Examples: The wingspan of the F-16 Fighting Falcon is 32 feet, 8 inches (9.8 meters).
+  Lemmas: falcon
+  Hypernyms: fighter_aircraft.n.01
+  Hyponyms: None
+  Semantic Topics: aircraft
+
+
+Term: bird
+  Definition: warm-blooded egg-laying vertebrates characterized by feathers and forelimbs modified as wings
+  Examples: None
+  Lemmas: bird
+  Hypernyms: vertebrate.n.01
+  Hyponyms: nonpasserine_bird.n.01, sinornis.n.01, piciform_bird.n.01, bird_of_passage.n.02, ibero-mesornis.n.01, gallinaceous_bird.n.01, bird_of_prey.n.01, trogon.n.01, archaeopteryx.n.01, cock.n.05, carinate.n.01, aquatic_bird.n.01, protoavis.n.01, archaeornis.n.01, twitterer.n.01, apodiform_bird.n.01, hen.n.02, ratite.n.01, cuculiform_bird.n.01, nester.n.02, caprimulgiform_bird.n.01, passerine.n.01, coraciiform_bird.n.01, night_bird.n.01, dickeybird.n.01, parrot.n.01
+  Semantic Topics: bird
+
+  Definition: the flesh of a bird or fowl (wild or domestic) used as food
+  Examples: None
+  Lemmas: bird, fowl
+  Hypernyms: meat.n.01
+  Hyponyms: wildfowl.n.01, poultry.n.02
+  Semantic Topics: None
+
+  Definition: informal terms for a (young) woman
+  Examples: None
+  Lemmas: dame, doll, wench, skirt, chick, bird
+  Hypernyms: girl.n.01
+  Hyponyms: None
+  Semantic Topics: None
+
+
+Term: aircraft
+  Definition: a vehicle that can fly
+  Examples: None
+  Lemmas: aircraft
+  Hypernyms: craft.n.02
+  Hyponyms: cruise_missile.n.01, lighter-than-air_craft.n.01, stealth_aircraft.n.01, heavier-than-air_craft.n.01, bogy.n.01
+  Semantic Topics: aircraft
+
+
+Term: fighter
+  Definition: someone who fights (or is fighting)
+  Examples: None
+  Lemmas: combatant, battler, belligerent, fighter, scrapper
+  Hypernyms: person.n.01
+  Hyponyms: hell-kite.n.01, wrestler.n.01, butter.n.02, mauler.n.01, gladiator.n.01, victor.n.01, gouger.n.01, street_fighter.n.02, boxer.n.01, brawler.n.01, fencer.n.01, skirmisher.n.01, defender.n.02
+  Semantic Topics: None
+
+  Definition: a high-speed military or naval airplane designed to destroy enemy aircraft in the air
+  Examples: None
+  Lemmas: fighter, fighter_aircraft, attack_aircraft
+  Hypernyms: airplane.n.01, warplane.n.01
+  Hyponyms: kamikaze.n.01, interceptor.n.01, stealth_fighter.n.01
+  Semantic Topics: aircraft
+
+
+Organized Data Summary:
+Number of Scenarios: 1
+Average queries per Scenario: 5.0
+Average documents(or passages) per Scenario: 5.0
+Number of Lexical Semantic Dictionary Entries: 4

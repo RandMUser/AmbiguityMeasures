@@ -1,0 +1,364 @@
+{
+    "falcon": [
+        {
+            "definition": "diurnal birds of prey having long pointed powerful wings adapted for swift flight",
+            "examples": [],
+            "lemmas": [
+                "falcon"
+            ],
+            "hypernyms": [
+                "hawk.n.01"
+            ],
+            "hyponyms": [
+                "kestrel.n.02",
+                "hobby.n.03",
+                "sparrow_hawk.n.01",
+                "peregrine.n.01",
+                "gyrfalcon.n.01",
+                "pigeon_hawk.n.01",
+                "caracara.n.01"
+            ]
+        },
+        {
+            "definition": "hunt with falcons",
+            "examples": [
+                "The tribes like to falcon in the desert"
+            ],
+            "lemmas": [
+                "falcon"
+            ],
+            "hypernyms": [
+                "hunt.v.01"
+            ],
+            "hyponyms": []
+        }
+    ],
+    "bird": [
+        {
+            "definition": "warm-blooded egg-laying vertebrates characterized by feathers and forelimbs modified as wings",
+            "examples": [],
+            "lemmas": [
+                "bird"
+            ],
+            "hypernyms": [
+                "vertebrate.n.01"
+            ],
+            "hyponyms": [
+                "nonpasserine_bird.n.01",
+                "sinornis.n.01",
+                "piciform_bird.n.01",
+                "bird_of_passage.n.02",
+                "ibero-mesornis.n.01",
+                "gallinaceous_bird.n.01",
+                "bird_of_prey.n.01",
+                "trogon.n.01",
+                "archaeopteryx.n.01",
+                "cock.n.05",
+                "carinate.n.01",
+                "aquatic_bird.n.01",
+                "protoavis.n.01",
+                "archaeornis.n.01",
+                "twitterer.n.01",
+                "apodiform_bird.n.01",
+                "hen.n.02",
+                "ratite.n.01",
+                "cuculiform_bird.n.01",
+                "nester.n.02",
+                "caprimulgiform_bird.n.01",
+                "passerine.n.01",
+                "coraciiform_bird.n.01",
+                "night_bird.n.01",
+                "dickeybird.n.01",
+                "parrot.n.01"
+            ]
+        },
+        {
+            "definition": "the flesh of a bird or fowl (wild or domestic) used as food",
+            "examples": [],
+            "lemmas": [
+                "bird",
+                "fowl"
+            ],
+            "hypernyms": [
+                "meat.n.01"
+            ],
+            "hyponyms": [
+                "wildfowl.n.01",
+                "poultry.n.02"
+            ]
+        },
+        {
+            "definition": "informal terms for a (young) woman",
+            "examples": [],
+            "lemmas": [
+                "dame",
+                "doll",
+                "wench",
+                "skirt",
+                "chick",
+                "bird"
+            ],
+            "hypernyms": [
+                "girl.n.01"
+            ],
+            "hyponyms": []
+        },
+        {
+            "definition": "a cry or noise made to express displeasure or contempt",
+            "examples": [],
+            "lemmas": [
+                "boo",
+                "hoot",
+                "Bronx_cheer",
+                "hiss",
+                "raspberry",
+                "razzing",
+                "razz",
+                "snort",
+                "bird"
+            ],
+            "hypernyms": [
+                "cry.n.01"
+            ],
+            "hyponyms": []
+        },
+        {
+            "definition": "badminton equipment consisting of a ball of cork or rubber with a crown of feathers",
+            "examples": [],
+            "lemmas": [
+                "shuttlecock",
+                "bird",
+                "birdie",
+                "shuttle"
+            ],
+            "hypernyms": [
+                "badminton_equipment.n.01"
+            ],
+            "hyponyms": []
+        },
+        {
+            "definition": "watch and study birds in their natural habitat",
+            "examples": [],
+            "lemmas": [
+                "bird",
+                "birdwatch"
+            ],
+            "hypernyms": [
+                "observe.v.04"
+            ],
+            "hyponyms": []
+        }
+    ],
+    "aircraft": [
+        {
+            "definition": "a vehicle that can fly",
+            "examples": [],
+            "lemmas": [
+                "aircraft"
+            ],
+            "hypernyms": [
+                "craft.n.02"
+            ],
+            "hyponyms": [
+                "cruise_missile.n.01",
+                "lighter-than-air_craft.n.01",
+                "stealth_aircraft.n.01",
+                "heavier-than-air_craft.n.01",
+                "bogy.n.01"
+            ]
+        }
+    ],
+    "jet": [
+        {
+            "definition": "an airplane powered by one or more jet engines",
+            "examples": [],
+            "lemmas": [
+                "jet",
+                "jet_plane",
+                "jet-propelled_plane"
+            ],
+            "hypernyms": [
+                "airplane.n.01"
+            ],
+            "hyponyms": [
+                "jumbojet.n.01",
+                "jetliner.n.01",
+                "twinjet.n.01",
+                "fanjet.n.01"
+            ]
+        },
+        {
+            "definition": "the occurrence of a sudden discharge (as of liquid)",
+            "examples": [],
+            "lemmas": [
+                "jet",
+                "squirt",
+                "spurt",
+                "spirt"
+            ],
+            "hypernyms": [
+                "discharge.n.06"
+            ],
+            "hyponyms": [
+                "spray.n.06",
+                "spritz.n.01"
+            ]
+        },
+        {
+            "definition": "a hard black form of lignite that takes a brilliant polish and is used in jewelry or ornamentation",
+            "examples": [],
+            "lemmas": [
+                "jet"
+            ],
+            "hypernyms": [
+                "lignite.n.01"
+            ],
+            "hyponyms": []
+        },
+        {
+            "definition": "atmospheric discharges (lasting 10 msec) bursting from the tops of giant storm clouds in blue cones that widen as they flash upward",
+            "examples": [],
+            "lemmas": [
+                "jet",
+                "blue_jet",
+                "reverse_lightning"
+            ],
+            "hypernyms": [
+                "atmospheric_electricity.n.01"
+            ],
+            "hyponyms": []
+        },
+        {
+            "definition": "street names for ketamine",
+            "examples": [],
+            "lemmas": [
+                "K",
+                "jet",
+                "super_acid",
+                "special_K",
+                "honey_oil",
+                "green",
+                "cat_valium",
+                "super_C"
+            ],
+            "hypernyms": [
+                "ketamine.n.01"
+            ],
+            "hyponyms": []
+        },
+        {
+            "definition": "an artificially produced flow of water",
+            "examples": [],
+            "lemmas": [
+                "fountain",
+                "jet"
+            ],
+            "hypernyms": [
+                "flow.n.01"
+            ],
+            "hyponyms": []
+        },
+        {
+            "definition": "issue in a jet; come out in a jet; stream or spring forth",
+            "examples": [
+                "Water jetted forth",
+                "flames were jetting out of the building"
+            ],
+            "lemmas": [
+                "jet",
+                "gush"
+            ],
+            "hypernyms": [
+                "run.v.06"
+            ],
+            "hyponyms": []
+        },
+        {
+            "definition": "fly a jet plane",
+            "examples": [],
+            "lemmas": [
+                "jet"
+            ],
+            "hypernyms": [
+                "fly.v.03"
+            ],
+            "hyponyms": []
+        },
+        {
+            "definition": "of the blackest black; similar to the color of jet or coal",
+            "examples": [],
+            "lemmas": [
+                "coal-black",
+                "jet",
+                "jet-black",
+                "pitchy",
+                "sooty"
+            ],
+            "hypernyms": [],
+            "hyponyms": []
+        }
+    ],
+    "fighter": [
+        {
+            "definition": "someone who fights (or is fighting)",
+            "examples": [],
+            "lemmas": [
+                "combatant",
+                "battler",
+                "belligerent",
+                "fighter",
+                "scrapper"
+            ],
+            "hypernyms": [
+                "person.n.01"
+            ],
+            "hyponyms": [
+                "hell-kite.n.01",
+                "wrestler.n.01",
+                "butter.n.02",
+                "mauler.n.01",
+                "gladiator.n.01",
+                "victor.n.01",
+                "gouger.n.01",
+                "street_fighter.n.02",
+                "boxer.n.01",
+                "brawler.n.01",
+                "fencer.n.01",
+                "skirmisher.n.01",
+                "defender.n.02"
+            ]
+        },
+        {
+            "definition": "a high-speed military or naval airplane designed to destroy enemy aircraft in the air",
+            "examples": [],
+            "lemmas": [
+                "fighter",
+                "fighter_aircraft",
+                "attack_aircraft"
+            ],
+            "hypernyms": [
+                "airplane.n.01",
+                "warplane.n.01"
+            ],
+            "hyponyms": [
+                "kamikaze.n.01",
+                "interceptor.n.01",
+                "stealth_fighter.n.01"
+            ]
+        },
+        {
+            "definition": "someone who fights for a cause",
+            "examples": [],
+            "lemmas": [
+                "champion",
+                "fighter",
+                "hero",
+                "paladin"
+            ],
+            "hypernyms": [
+                "defender.n.01"
+            ],
+            "hyponyms": []
+        }
+    ]
+}

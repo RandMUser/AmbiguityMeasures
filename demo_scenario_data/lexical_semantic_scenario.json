@@ -1,0 +1,281 @@
+{
+    "lemma":"a heading indicating the subject or argument of a literary composition, an annotation, or a dictionary entry.",
+    "lexical_semantic_dictionary": [
+        {
+            "term": "falcon",
+            "senses": [
+                {
+                    "definition": "diurnal birds of prey having long pointed powerful wings adapted for swift flight",
+                    "examples": [],
+                    "lemmas": [
+                        "falcon"
+                    ],
+                    "hypernyms": [
+                        "hawk.n.01"
+                    ],
+                    "hyponyms": [
+                        "kestrel.n.02",
+                        "hobby.n.03",
+                        "sparrow_hawk.n.01",
+                        "peregrine.n.01",
+                        "gyrfalcon.n.01",
+                        "pigeon_hawk.n.01",
+                        "caracara.n.01"
+                    ],
+                    "semantic_topics": [
+                        "bird"
+                    ]
+                },
+                {
+                    "definition": "hunt with falcons",
+                    "examples": [
+                        "The tribes like to falcon in the desert"
+                    ],
+                    "lemmas": [
+                        "falcon"
+                    ],
+                    "hypernyms": [
+                        "hunt.v.01"
+                    ],
+                    "hyponyms": [],
+                    "semantic_topics": ["bird"]
+                },
+                {
+                    "definition": "F-16 Fighting Falcon is an American single-engine supersonic multirole fighter aircraft",
+                    "examples": [
+                        "The wingspan of the F-16 Fighting Falcon is 32 feet, 8 inches (9.8 meters)."
+                    ],
+                    "lemmas": [
+                        "falcon"
+                    ],
+                    "hypernyms": [
+                        "fighter_aircraft.n.01"
+                    ],
+                    "hyponyms": [],
+                    "semantic_topics": [
+                        "aircraft"
+                    ]
+                }
+            ]
+        },
+        {
+            "term": "bird",
+            "senses": [
+                {
+                    "definition": "warm-blooded egg-laying vertebrates characterized by feathers and forelimbs modified as wings",
+                    "examples": [],
+                    "lemmas": [
+                        "bird"
+                    ],
+                    "hypernyms": [
+                        "vertebrate.n.01"
+                    ],
+                    "hyponyms": [
+                        "nonpasserine_bird.n.01",
+                        "sinornis.n.01",
+                        "piciform_bird.n.01",
+                        "bird_of_passage.n.02",
+                        "ibero-mesornis.n.01",
+                        "gallinaceous_bird.n.01",
+                        "bird_of_prey.n.01",
+                        "trogon.n.01",
+                        "archaeopteryx.n.01",
+                        "cock.n.05",
+                        "carinate.n.01",
+                        "aquatic_bird.n.01",
+                        "protoavis.n.01",
+                        "archaeornis.n.01",
+                        "twitterer.n.01",
+                        "apodiform_bird.n.01",
+                        "hen.n.02",
+                        "ratite.n.01",
+                        "cuculiform_bird.n.01",
+                        "nester.n.02",
+                        "caprimulgiform_bird.n.01",
+                        "passerine.n.01",
+                        "coraciiform_bird.n.01",
+                        "night_bird.n.01",
+                        "dickeybird.n.01",
+                        "parrot.n.01"
+                    ],
+                    "semantic_topics": [
+                        "bird"
+                    ]
+                },
+                {
+                    "definition": "the flesh of a bird or fowl (wild or domestic) used as food",
+                    "examples": [],
+                    "lemmas": [
+                        "bird",
+                        "fowl"
+                    ],
+                    "hypernyms": [
+                        "meat.n.01"
+                    ],
+                    "hyponyms": [
+                        "wildfowl.n.01",
+                        "poultry.n.02"
+                    ],
+                    "semantic_topics": []
+                },
+                {
+                    "definition": "informal terms for a (young) woman",
+                    "examples": [],
+                    "lemmas": [
+                        "dame",
+                        "doll",
+                        "wench",
+                        "skirt",
+                        "chick",
+                        "bird"
+                    ],
+                    "hypernyms": [
+                        "girl.n.01"
+                    ],
+                    "hyponyms": [],
+                    "semantic_topics": []
+                }
+            ]
+        },
+        {
+            "term": "aircraft",
+            "senses": [
+                {
+                    "definition": "a vehicle that can fly",
+                    "examples": [],
+                    "lemmas": [
+                        "aircraft"
+                    ],
+                    "hypernyms": [
+                        "craft.n.02"
+                    ],
+                    "hyponyms": [
+                        "cruise_missile.n.01",
+                        "lighter-than-air_craft.n.01",
+                        "stealth_aircraft.n.01",
+                        "heavier-than-air_craft.n.01",
+                        "bogy.n.01"
+                    ],
+                    "semantic_topics": [
+                        "aircraft"
+                    ]
+                }
+            ]
+        },
+        {
+            "term": "fighter",
+            "senses": [
+                {
+                    "definition": "someone who fights (or is fighting)",
+                    "examples": [],
+                    "lemmas": [
+                        "combatant",
+                        "battler",
+                        "belligerent",
+                        "fighter",
+                        "scrapper"
+                    ],
+                    "hypernyms": [
+                        "person.n.01"
+                    ],
+                    "hyponyms": [
+                        "hell-kite.n.01",
+                        "wrestler.n.01",
+                        "butter.n.02",
+                        "mauler.n.01",
+                        "gladiator.n.01",
+                        "victor.n.01",
+                        "gouger.n.01",
+                        "street_fighter.n.02",
+                        "boxer.n.01",
+                        "brawler.n.01",
+                        "fencer.n.01",
+                        "skirmisher.n.01",
+                        "defender.n.02"
+                    ],
+                    "semantic_topics": []
+                },
+                {
+                    "definition": "a high-speed military or naval airplane designed to destroy enemy aircraft in the air",
+                    "examples": [],
+                    "lemmas": [
+                        "fighter",
+                        "fighter_aircraft",
+                        "attack_aircraft"
+                    ],
+                    "hypernyms": [
+                        "airplane.n.01",
+                        "warplane.n.01"
+                    ],
+                    "hyponyms": [
+                        "kamikaze.n.01",
+                        "interceptor.n.01",
+                        "stealth_fighter.n.01"
+                    ],
+                    "semantic_topics": [
+                        "aircraft"
+                    ]
+                }
+            ]
+        }
+    ],
+
+    "scenarios": [
+      {
+        "scenario_id": 1,
+        "title": "Ambiguity in Identical Queries with Different Topics",
+        "intuition": "Identical queries (q1, q2) are expected to result in identical embeddings. If the relevant passages paired with these queries (p1, p2) address distinct topics, the ambiguity is inferred due to multiple possible meanings represented by the identical embeddings.",
+        "queries": [
+          { "qid": "S1_q1", "query": "falcon wingspan", "lexical_topic": "falcon", "semantic_topic": "aircraft" },
+          { "qid": "S1_q2", "query": "falcon wingspan", "lexical_topic": "falcon", "semantic_topic": "bird" },
+          { "qid": "S1_q3", "query": "falcon maximum airspeed", "lexical_topic": "falcon", "semantic_topic": "bird" },
+          { "qid": "S1_q4", "query": "falcon species description", "lexical_topic": "falcon", "semantic_topic": "bird" },
+          { "qid": "S1_q5", "query": "falcon hunting speed", "lexical_topic": "falcon", "semantic_topic": "bird" }
+        ],
+        "passages": [
+          {
+            "pid": "S1_p1",
+            "text": "The General Dynamics F-16 Fighting Falcon is an American single-engine supersonic multirole fighter aircraft originally developed by General Dynamics for the United States Air Force (USAF). The F-16 is a single-engine fighter aircraft that is used by the U.S. Air Force, the Israeli Air Force, and many other nations. It is powered by a Pratt & Whitney or General Electric turbofan engine. The F-16 is armed with a 20-mm rotary cannon and can carry a variety of bombs and missiles. The wingspan of the F-16 Fighting Falcon is 32 feet, 8 inches (9.8 meters).",
+            "lexical_topic": "falcon",
+            "semantic_topic": "aircraft"
+          },
+          {
+            "pid": "S1_p2",
+            "text": "Biology. Peregrine falcons weigh 530-1600 grams with a wingspan of 39.4-43.3 inches (100-110 cm). The females are larger than the males but both sexes have similar plumage with long pointed wings and a long tail. The peregrine falcon is known for high-speed flight reaching up to 240 mph.",
+            "lexical_topic": "falcon",
+            "semantic_topic": "bird"
+          },
+          {
+            "pid": "S1_p3",
+            "text": "Falcons are birds of prey in the genus Falco, which includes about 40 species. Some small species of falcons with long, narrow wings are called hobbies, and some that hover while hunting are called kestrels. Speed: Peregrine falcon: 240 mph. Wingspan: Peregrine falcon: 2.4 – 3.9 ft. Scientific name: Falco. Bird in English: falcon. Class: Aves. Domain: Eukaryota.",
+            "lexical_topic": "falcon",
+            "semantic_topic": "bird"
+          },
+          {
+            "pid": "S1_p4",
+            "text": "The falcon's hunting behavior includes a high-speed dive called a stoop. Falcons are known to achieve remarkable speeds during stoops, often exceeding 200 mph, making them one of the fastest animals in the animal kingdom.",
+            "lexical_topic": "falcon",
+            "semantic_topic": "bird"
+          },
+          {
+            "pid": "S1_p5",
+            "text": "The F-16 Falcon is often used in military operations involving rapid aerial maneuvers and air-to-air combat. It is renowned for its agility and versatile weapons system.",
+            "lexical_topic": "falcon",
+            "semantic_topic": "aircraft"
+          }
+        ],
+        "qrels": [
+          { "qid": "S1_q1", "pid": "S1_p1", "relevance": "relevant" },
+          { "qid": "S1_q2", "pid": "S1_p2", "relevance": "relevant" },
+          { "qid": "S1_q3", "pid": "S1_p3", "relevance": "relevant" },
+          { "qid": "S1_q4", "pid": "S1_p3", "relevance": "relevant" },
+          { "qid": "S1_q5", "pid": "S1_p4", "relevance": "relevant" },
+          { "qid": "S1_q1", "pid": "S1_p2", "relevance": "not-relevant" },
+          { "qid": "S1_q1", "pid": "S1_p3", "relevance": "not-relevant" },
+          { "qid": "S1_q2", "pid": "S1_p1", "relevance": "not-relevant" },
+          { "qid": "S1_q3", "pid": "S1_p1", "relevance": "not-relevant" },
+          { "qid": "S1_q3", "pid": "S1_p2", "relevance": "relevant" }
+        ]
+      }
+    ]
+  }

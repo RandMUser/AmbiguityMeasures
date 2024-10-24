@@ -1,0 +1,53 @@
+# Outline for Future Improvements
+
+## 1. Improvements for Future Documents Describing Experiments, Results, and Conclusions
+
+### 1.1 Expanded Introduction and Context
+- **Detailed Problem Statement**: In future documents, provide more context for the importance of embedding model evaluation in dense retrievers. Clearly define why dense retrieval is a critical task, emphasizing its applications in real-world systems.
+- **Clear Differentiation of Novel Metrics**: Differentiate novel metrics from traditional ones more explicitly. Provide a rationale for why current metrics are insufficient and how new metrics fill these gaps.
+
+### 1.2 Detailed Methodology and Data Flow
+- **Methodology Breakdown**: Include more detailed step-by-step procedures. Ensure readers understand each stage of the experiment, from data processing to evaluation. Flowcharts or diagrams could be used to visually represent data flow through the system.
+- **Data Choice Justification**: Explain the selection of datasets in depth, ensuring the representativeness of the dataset is well established. This includes a comparison to alternative datasets and justification of how the chosen dataset aligns with the investigation goals.
+
+### 1.3 Comprehensive Analysis of Metrics
+- **Traditional vs. Novel Metrics Comparison**: Clearly juxtapose the performance of embedding models using traditional metrics (like NDCG) and novel metrics (like A-QSR-RDMD). Use plots and descriptive statistics to help readers quickly identify patterns.
+- **Ambiguity Measure Analysis**: Provide more granular insights into how ambiguity metrics correlate with retrieval effectiveness. Future documents should include examples of ambiguous vs. non-ambiguous queries and corresponding performance insights.
+
+### 1.4 Visualization and Result Presentation
+- **Graphical Insights**: Future documents should use plots to visualize the relationship between metrics. Highlight which types of queries lead to different metric outcomes.
+- **Summary Tables**: Include concise tables that summarize retrieval performance, ambiguity metrics, and other metrics for each embedding model. Provide clear interpretations of what the numbers indicate.
+- **Meaningful Examples**: Where possible, show real examples of queries, their retrieved results, and any challenges identified using novel metrics. This helps make abstract metric analysis concrete.
+
+### 1.5 Clarity in Conclusions and Future Directions
+- **Conclusive Statements**: Future conclusions should clearly state the practical implications of findings—such as which embedding models are more effective for certain types of queries or domains.
+- **Actionable Insights for Model Improvement**: Provide more explicit guidance on how insights gained from ambiguity metrics can guide model training. Future directions should include proposed improvements to model training methodologies.
+
+## 2. Suggestions for Improving the Final Experiment Code Based on Proof of Concept Code
+
+### 2.1 Code Structure and Modularity
+- **Function Refactoring for Reusability**: Some functions in the proof-of-concept (e.g., embedding generation and retrieval) could be refactored into reusable modules. This will make it easier to switch between embedding models or distance metrics.
+- **Central Configuration Management**: Consider consolidating all configuration settings into a central configuration file. This would simplify adjustments for different experiments, such as model types or dataset variants, improving reproducibility.
+- **Standardize Variable Names**: Ensure consistent variable naming throughout the code. This helps maintain readability, especially for variables like paths and model identifiers, which are referenced multiple times.
+
+### 2.2 Efficiency and Optimization
+- **Reduce Redundant Computations**: Implement checks to avoid recomputing embeddings or distances if results have been persisted. This will reduce overall computation time, especially for large datasets like MS MARCO.
+- **Batch Processing for Retrieval and Embedding**: Where possible, process queries and embeddings in batches to take advantage of parallel processing capabilities. This would significantly improve computational efficiency, especially when using GPU acceleration.
+- **Data Persistence Improvements**: Use more efficient data formats for persistence, such as HDF5 or databases specifically designed for high-dimensional vector storage. This would help handle the large size of embeddings more efficiently than plain pickled files.
+
+### 2.3 Documentation and User Guidance
+- **Inline Documentation**: Increase inline code comments, especially for complex functions or workflows (e.g., ambiguity metric calculations). Ensure the code is easily understandable by other researchers who might want to extend it.
+- **User-Friendly Scripts**: Add user prompts or command-line arguments to make the code more user-friendly. For example, allow users to specify which embedding model or distance metric to use directly through arguments.
+- **Visualization of Code Outputs**: Develop scripts to automatically generate plots of retrieval and ambiguity metrics. This would make it easier to visualize results after running experiments without the need for additional manual steps.
+
+### 2.4 Experiment Scalability and Robustness
+- **Error Handling**: Add more robust error handling to the code, particularly for steps that involve large-scale data retrieval and embedding generation. This includes managing failed downloads, corrupted files, or unexpected query inputs.
+- **Scalability Considerations**: As the investigation scales, ensure the code supports distributed processing where applicable. For instance, using distributed databases or frameworks like Apache Spark can enhance scalability for larger datasets.
+- **Integration with TREC Tools**: Improve integration with evaluation tools like TREC by automating the conversion of results to compatible formats and by clearly documenting the process of using TREC evaluation scripts.
+
+### 2.5 Experiment Tracking and Reproducibility
+- **Use of Experiment Tracking Tools**: Integrate tools like MLflow or Weights & Biases for experiment tracking. This would help maintain a record of different runs, configurations, and outcomes, improving the reproducibility of results.
+- **Experiment Summary Generation**: Develop code that automatically generates experiment summaries, including metrics results, plots, and configurations used. This would streamline the process of documentation for reports and publications.
+
+By addressing these areas, future documents and experiments can be more efficient, insightful, and easier to extend or reproduce, leading to more robust conclusions about the effectiveness of embedding models in dense retrieval systems.
+

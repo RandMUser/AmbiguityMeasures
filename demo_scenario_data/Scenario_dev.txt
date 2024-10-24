@@ -1,0 +1,53 @@
+Great! Now generate a set of scenarios that can be used to exercise the experiment code and help check the intuition we are applying with the new measures. 
+Each scenario must contain queries with an intuited relationships between them, along with a set of passages, and finally a set of relevance relationship mappings (qrels data) between queries and passages in the scenario that also follow the logic of the original intuition for the queries in the scenario. 
+Each scenario should include at least 5 queries, with one relevant and one not-relevant document identified in the qrels, and passages data. 
+The first scenario should based upon a set of ambiguous queries following the intuition that identical queries q_1, q_2 will result in identical text embeddings (E(q_1)==E(q_2)), thus, if their qrel paired relevant passages p_1 and P_2 respectively are found to be addressing semantically unique topics (as determined by the word sense of the topic subject of the passage), then the queries q_1 and q_2 are be said to be ambiguous by the qrel labels.
+Example queries following this scenario intuition are:
+q_1 = "falcon wingspan"
+q_2 = "falcon wingspan"
+q_3 = "falcon maximum airspeed"
+p_1 = "The General Dynamics F-16 Fighting Falcon is an American single-engine supersonic multirole fighter aircraft originally developed by General Dynamics for the United States Air Force (USAF). The F-16 is a single-engine fighter aircraft that is used by the U.S. Air Force, the Israeli Air Force, and many other nations. It is powered by a Pratt & Whitney or General Electric turbofan engine. The F-16 is armed with a 20-mm rotary cannon and can carry a variety of bombs and missiles. The wingspan of the F-16 Fighting Falcon is 32 feet, 8 inches (9.8 meters)."
+p_2 = "Biology. Peregrine falcons weigh 530-1600 grams with a wingspan of 39.4-43.3 inches (100-110 cm). The females are larger than the males but both sexes have similar plumage with long pointed wings and a long tail. The perigrine falcon is known for high speed flight reaching up to 240mph."
+p_3 = "Falcons are birds of prey in the genus Falco, which includes about 40 species. Some small species of falcons with long, narrow wings are called hobbies, and some that hover while hunting are called kestrels. Speed: Peregrine falcon: 240 mph\n Wingspan: Peregrine falcon: 2.4 – 3.9 ft.\n Scientific name: Falco\n Bird in english: falcon\n Class: Aves\n Domain: Eukaryota\n"
+
+qrels:
+q_1 p_1 relevant
+q_2 p_2 relevant
+q_3 p_3 relevant
+q_1 p_2 not-relevant
+q_1 p_3 not-relevant
+q_2 p_1 not-relevant
+q_2 p_3 relevant
+q_3 p_1 not-relevant
+q_3 p_2 relevant
+
+
+Falcons are birds of prey in the genus Falco, which includes about 40 species. Some small species of falcons with long, narrow wings are called hobbies, and some that hover while hunting are called kestrels. Wikipedia
+Speed: Peregrine falcon: 240 mph
+Wingspan: Peregrine falcon: 2.4 – 3.9 ft.
+Scientific name: Falco
+Bird in english: falcon cambridge.org
+Class: Aves
+Domain: Eukaryota
+
+The wingspan of the F-16 Fighting Falcon is 32 feet, 8 inches (9.8 meters). Here are some other specifications for the F-16:
+Length: 49 feet, 5 inches (14.8 meters)
+Height: 16 feet (4.8 meters)
+Weight: 19,700 pounds without fuel (8,936 kilograms)
+Maximum takeoff weight: 37,500 pounds (16,875 kilograms)
+Speed: 1,500 mph (Mach 2 at altitude)
+Range: More than 2,002 miles ferry range (1,740 nautical miles)
+Ceiling: Above 50,000 feet (15 kilometers)
+
+falcon wingspan
+-- Google AI Result:
+https://www.google.com/search?q=falcon+wingspan&rlz=1C1ONGR_enUS941US941&oq=falcon+wingspan&gs_lcrp=EgZjaHJvbWUyCQgAEEUYORiABDIHCAEQABiABDIICAIQABgWGB4yCAgDEAAYFhgeMggIBBAAGBYYHjIICAUQABgWGB4yCAgGEAAYFhgeMggIBxAAGBYYHjIICAgQABgWGB4yCAgJEAAYFhge0gEIMTc3OGowajeoAgCwAgA&sourceid=chrome&ie=UTF-8#vhid=zephyr:0&vssid=atritem-https://wildlife.ca.gov/Conservation/Birds/Peregrine-Falcon:~:text=2.4%20%E2%80%93%203.9%20ft.-,Biology.%20Peregrine%20falcons%20weigh%20530%2D1600%20grams%20with%20a%20wingspan%20of%2039.4%2D43.3%20inches%20(100%2D110%20cm).%20The%20females%20are%20larger%20than%20the%20males%20but%20both%20sexes%20have%20similar%20plumage%20with%20long%20pointed%20wings%20and%20a%20long%20tail.,-American%20Peregrine%20Falcons
+Biology. Peregrine falcons weigh 530-1600 grams with a wingspan of 39.4-43.3 inches (100-110 cm). The females are larger than the males but both sexes have similar plumage with long pointed wings and a long tail.
+
+
+
+Great work with the scenario data. After reviewing, it looks like we could use some additional descriptive information for the elements within each scenario. For example, we should explicitly indicate both the lexical form and semantic form (word sense equivalent) of the topic term in scenario 1 as inferred by the qrel relationship for the queries, and as found in the passages themselves. For example the inferred lexical and semantic topic for q1 is falcon, and aircraft respectively. Similarly, the  lexical and semantic topic for p1 is falcon and aircraft respectively.
+
+With this additional information we can also construct a "lexical_semantic_dictionary" list alongside the "scenarios" list to contain all of the terms, word senses, and definitions for each as they are represented across all of the scenario elements.
+
+Please update the scenario generation json structure to incorporate the proper lexical, and semantic labels for each query and passage in the current file. Also aggregate the collection of terms, semantic forms, and definitions into a new lexical_semantic_dictionary within the json document.

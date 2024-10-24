@@ -1,4 +1,8 @@
-.venv
-data
+/.venv/
+/data/
 scripts/misc_utility_scripts/azcopy_list_output.txt
 scripts/misc_utility_scripts/azcopy_testing.txt
+code/__pycache__/
+code/trec_eval_results.txt
+code/results.trec
+persisted_vector_store/

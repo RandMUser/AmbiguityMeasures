@@ -1,0 +1,123 @@
+{
+    "scenarios": [
+      {
+        "scenario_id": 1,
+        "title": "Potential Semantic Ambiguity of Identical (lexically similar / identical) Queries indicated by Observed Topic diversity in qrel-relevant labeled documents.",
+        "intuition": "Identical queries (q1, q2) are expected to result in identical embeddings. If the relevant passages paired with these queries (p1, p2) address distinct topics, the ambiguity is inferred due to multiple possible meanings represented by the identical embeddings.",
+        "queries": [
+          { "qid": "q1", "query": "falcon wingspan" },
+          { "qid": "q2", "query": "falcon wingspan" },
+          { "qid": "q3", "query": "falcon maximum airspeed" },
+          { "qid": "q4", "query": "falcon species description" },
+          { "qid": "q5", "query": "falcon hunting speed" }
+        ],
+        "passages": [
+          {
+            "pid": "p1",
+            "text": "The General Dynamics F-16 Fighting Falcon is an American single-engine supersonic multirole fighter aircraft originally developed by General Dynamics for the United States Air Force (USAF). The F-16 is a single-engine fighter aircraft that is used by the U.S. Air Force, the Israeli Air Force, and many other nations. It is powered by a Pratt & Whitney or General Electric turbofan engine. The F-16 is armed with a 20-mm rotary cannon and can carry a variety of bombs and missiles. The wingspan of the F-16 Fighting Falcon is 32 feet, 8 inches (9.8 meters)."
+          },
+          {
+            "pid": "p2",
+            "text": "Biology. Peregrine falcons weigh 530-1600 grams with a wingspan of 39.4-43.3 inches (100-110 cm). The females are larger than the males but both sexes have similar plumage with long pointed wings and a long tail. The peregrine falcon is known for high-speed flight reaching up to 240 mph."
+          },
+          {
+            "pid": "p3",
+            "text": "Falcons are birds of prey in the genus Falco, which includes about 40 species. Some small species of falcons with long, narrow wings are called hobbies, and some that hover while hunting are called kestrels. Speed: Peregrine falcon: 240 mph. Wingspan: Peregrine falcon: 2.4 – 3.9 ft. Scientific name: Falco. Bird in English: falcon. Class: Aves. Domain: Eukaryota."
+          },
+          {
+            "pid": "p4",
+            "text": "The falcon's hunting behavior includes a high-speed dive called a stoop. Falcons are known to achieve remarkable speeds during stoops, often exceeding 200 mph, making them one of the fastest animals in the animal kingdom."
+          },
+          {
+            "pid": "p5",
+            "text": "The F-16 Falcon is often used in military operations involving rapid aerial maneuvers and air-to-air combat. It is renowned for its agility and versatile weapons system."
+          }
+        ],
+        "qrels": [
+          { "qid": "q1", "pid": "p1", "relevance": "relevant" },
+          { "qid": "q2", "pid": "p2", "relevance": "relevant" },
+          { "qid": "q3", "pid": "p3", "relevance": "relevant" },
+          { "qid": "q4", "pid": "p3", "relevance": "relevant" },
+          { "qid": "q5", "pid": "p4", "relevance": "relevant" },
+          { "qid": "q1", "pid": "p2", "relevance": "not-relevant" },
+          { "qid": "q1", "pid": "p3", "relevance": "not-relevant" },
+          { "qid": "q2", "pid": "p1", "relevance": "not-relevant" },
+          { "qid": "q3", "pid": "p1", "relevance": "not-relevant" },
+          { "qid": "q3", "pid": "p2", "relevance": "relevant" }
+        ]
+      },
+      {
+        "scenario_id": 2,
+        "title": "Polysemy in Terms with Multiple Meanings",
+        "intuition": "Queries containing polysemous terms can have different meanings depending on context. If embeddings of these queries do not differentiate between different meanings, it could lead to ambiguous or misleading retrieval results.",
+        "queries": [
+          { "qid": "q6", "query": "apple nutrition facts" },
+          { "qid": "q7", "query": "apple product launch" },
+          { "qid": "q8", "query": "apple macbook features" },
+          { "qid": "q9", "query": "fruit nutrition facts" },
+          { "qid": "q10", "query": "macbook battery life" }
+        ],
+        "passages": [
+          {
+            "pid": "p6",
+            "text": "An apple is a sweet, edible fruit produced by an apple tree (Malus domestica). Apples are high in fiber, vitamin C, and various antioxidants. They are very filling, considering their low calorie content."
+          },
+          {
+            "pid": "p7",
+            "text": "Apple Inc. announced its latest product launch, featuring the newest generation of the MacBook Pro, along with updates to the iPhone and Apple Watch."
+          },
+          {
+            "pid": "p8",
+            "text": "The MacBook features an M1 chip for high-speed performance, a retina display, and improved battery life compared to previous models."
+          }
+        ],
+        "qrels": [
+          { "qid": "q6", "pid": "p6", "relevance": "relevant" },
+          { "qid": "q7", "pid": "p7", "relevance": "relevant" },
+          { "qid": "q8", "pid": "p8", "relevance": "relevant" },
+          { "qid": "q9", "pid": "p6", "relevance": "relevant" },
+          { "qid": "q10", "pid": "p8", "relevance": "relevant" },
+          { "qid": "q6", "pid": "p7", "relevance": "not-relevant" },
+          { "qid": "q7", "pid": "p6", "relevance": "not-relevant" },
+          { "qid": "q8", "pid": "p6", "relevance": "not-relevant" }
+        ]
+      },
+      {
+        "scenario_id": 3,
+        "title": "Synonym Overlap in Different Contexts",
+        "intuition": "Queries containing synonyms may have similar embeddings even though they could differ in specific contexts, leading to incorrect relevance judgments. This scenario helps test if embeddings can appropriately distinguish synonymous terms depending on the domain.",
+        "queries": [
+          { "qid": "q11", "query": "car speed" },
+          { "qid": "q12", "query": "vehicle speed" },
+          { "qid": "q13", "query": "automobile top speed" },
+          { "qid": "q14", "query": "car fuel efficiency" },
+          { "qid": "q15", "query": "vehicle fuel consumption" }
+        ],
+        "passages": [
+          {
+            "pid": "p9",
+            "text": "Cars are capable of reaching top speeds ranging from 120 to 200 mph, depending on the model and engine specifications. Sports cars often have higher top speeds than sedans."
+          },
+          {
+            "pid": "p10",
+            "text": "Fuel efficiency of a car is determined by various factors, including engine type, aerodynamics, and driving habits. Cars are typically rated in miles per gallon (mpg)."
+          },
+          {
+            "pid": "p11",
+            "text": "Vehicles, such as trucks and sedans, have varying top speeds based on their build and purpose. Speed regulations may also limit vehicle performance."
+          }
+        ],
+        "qrels": [
+          { "qid": "q11", "pid": "p9", "relevance": "relevant" },
+          { "qid": "q12", "pid": "p11", "relevance": "relevant" },
+          { "qid": "q13", "pid": "p9", "relevance": "relevant" },
+          { "qid": "q14", "pid": "p10", "relevance": "relevant" },
+          { "qid": "q15", "pid": "p10", "relevance": "relevant" },
+          { "qid": "q11", "pid": "p10", "relevance": "not-relevant" },
+          { "qid": "q12", "pid": "p9", "relevance": "not-relevant" },
+          { "qid": "q13", "pid": "p11", "relevance": "not-relevant" }
+        ]
+      }
+    ]
+  }
+  

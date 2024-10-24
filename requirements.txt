@@ -9,3 +9,4 @@ seaborn
 chromadb
 sentence-transformers
 ipykernel
+nltk

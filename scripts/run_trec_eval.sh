@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Configurable installation path for trec_eval
-TREC_EVAL_INSTALL_PATH="./.venv/bin"
+TREC_EVAL_INSTALL_PATH="../.venv/bin"
 # Define saved variables
 RELATIVE_PATH= "$TREC_EVAL_INSTALL_PATH" #"relative/path/to/target/directory"  # Replace with actual relative path from the saved working directory
 
